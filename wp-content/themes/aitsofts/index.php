@@ -38,7 +38,7 @@
                             <div class="brand">
                                 <a href="index.html" class="t-link">
                                     <img
-                                        src="<?php echo get_template_directory_uri().'/assets/img/logo-alpha.png' ?>"
+                                        src="<?php echo get_theme_mod('ait_logo') ?>"
                                         alt="zolfin"
                                         class="img-fluid w-100"
                                     />
