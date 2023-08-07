@@ -24,3 +24,22 @@ function ait_css_js_enqueue(){
     wp_enqueue_script('ait-core', get_template_directory_uri().'/assets/js/main.js',array(),'1.0.0',true,);
 }
 add_action('wp_enqueue_scripts','ait_css_js_enqueue');
+
+//Theme Function
+
+function ait_customizar_register($wp_customize){
+    $wp_customize->add_section('ait_header_area',array(
+        'title'=>__('Header Area','aitsofts'),
+        'description'=> 'If you interested to Update your header area, you can do it here.'
+    ));
+    $wp_customize->add_setting('ait_logo',array(
+        'default' => get_bloginfo('template_directory').'/assets/img/logo-alpha.png',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'ait_logo',array(
+        'label'=>'Upload Site Logo',
+        'description'=> 'If you interested to change you site logo then do it',
+        'setting'=>'ait_logo',
+        'section'=>'ait_header_area',
+    )));
+}
+add_action('customize_register', 'ait_customizar_register');
