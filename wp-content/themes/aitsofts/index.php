@@ -442,7 +442,7 @@
                             <div class="cards__footer text-center t-mt-30">
                                 <a href="#" class="t-link t-link--alpha">
                                     <span class="cards__footer-icon">
-                                        <i class="las la-plus-circle"></i>
+                                    <i class="fa-regular fa-circle-plus"></i>
                                     </span>
                                     <span
                                         class="text-capitalize font-weight-bold"

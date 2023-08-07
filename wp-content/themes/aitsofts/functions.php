@@ -12,7 +12,9 @@ function ait_css_js_enqueue(){
     wp_enqueue_style('ait-style',get_stylesheet_uri());
     wp_register_style('ait-core',get_template_directory_uri().'/assets/css/core.css', array(),'1.0.0','all');
     wp_enqueue_style('ait-core');
-
+    //fonts
+    wp_enqueue_style('google-font','https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Libre+Franklin:wght@700&family=Poppins:wght@600;700&family=Roboto:wght@400;500;700&family=Bree+Serif&display=swap',array(),'6.4.2',false);
+    wp_enqueue_style('font-awesome',get_template_directory_uri().'/assets/css/fontawesome.min.css', array(),'6.4.2',true);
     //jQuery Files
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap-bundle', get_template_directory_uri().'/assets/js/bootstrap.bundle.min.js',array(),'5.0.0',true,);
@@ -22,6 +24,9 @@ function ait_css_js_enqueue(){
     wp_enqueue_script('ait-magnafic-popup', get_template_directory_uri().'/assets/js/magnafic-popup.js',array(),'1.0.0',true,);
     wp_enqueue_script('ait-animation-on-scroll', get_template_directory_uri().'/assets/js/sal.js',array(),'1.0.0',true,);
     wp_enqueue_script('ait-core', get_template_directory_uri().'/assets/js/main.js',array(),'1.0.0',true,);
+
+    //fontawesome
+    wp_enqueue_script('font-awesome',get_template_directory_uri().'/assets/js/fontawesome.min.js',array(),'6.4.2',true);
 }
 add_action('wp_enqueue_scripts','ait_css_js_enqueue');
 
